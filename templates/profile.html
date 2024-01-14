@@ -1,0 +1,79 @@
+<!-- this is done to set the url of static folder for images  -->
+{% set static_url = url_for('static', filename='') %}
+{% include 'headersidebar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ static_url }}stylemain.css">
+    <title>Your Profile - Psyche Scan</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        } 
+
+
+        .boxalign {
+            margin-left: 40vw;
+            align-items: center;
+        }
+
+        .profile-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding-bottom: 40px;
+            height: auto;
+            text-align: center;
+        }
+
+        .profile-picture {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        .user-info {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .logout-btn {
+            padding: 10px 20px;
+            background-color: #de1738;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="boxalign">
+        <div class="profile-card">
+            <img class="profile-picture" src="{{ static_url }}images/User-Profile.png" alt="Profile Picture">
+            <div class="user-info">
+                <p><strong>Name:</strong> {{user.name}}</p>
+                <p><strong>Email:</strong> {{user.email_id}}</p>
+                <p><strong>Username:</strong> {{user.user_id}}</p>
+                <p><strong>Age:</strong> {{user.Age}}</p>
+                <p><strong>Gender:</strong>{{user.Gender}}</p>
+                
+            </div>
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+
+    </div>
+</body>
+</html>

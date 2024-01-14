@@ -1,0 +1,221 @@
+<!-- this is done to set the url of static folder for images  -->
+{% set static_url = url_for('static', filename='') %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psyche Scan Dashboard</title>
+    <link rel="stylesheet" href="{{ static_url }}stylemain.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        
+        <button onclick="window.location.href='/home'">Psyche Scan</button>
+        <div class="left">
+            <h1 class="heading">SOCIAL DATA ANALYSIS</h1>
+        </div>
+        <div class="right">
+            <a class ="profile" href="/profile">
+                <img src="{{static_url}}/images/userlogo.png" alt="profile Image">        
+            </a>
+            <button onclick="window.location.href='/logout'">logout</button>
+        </div>
+
+        
+    </header>
+    <main>
+        
+        <div class="sidebar">
+            <h1 style="text-align: center;">Psyche Scan</h1>
+            <a href="/home">Home</a>
+            <a href="/remedies">Remedies</a>
+            <a href="/prohelp">Seek Professional Help</a>
+            <a href="/suggestions">Suggestions</a>
+        </div>
+    
+        <div class="dashboard-container">
+
+            <div class="graph-container">
+                <canvas id="myLineChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+        <div class="dashboard-container">
+            
+            <div class="small-graph">
+                <div class="graph-heading">Interpretation of Score</div>
+                <p>85% - 100% =Healthy Mental State</p>
+                <p>70% - 85% = Moderately Healthy</p>
+                <p>30% - 70 % =Moderate Depression</p>
+                <p>15% - 30% =Moderately Severe Depression</p>
+                <p>0% - 15% = Severe Depressed</p>
+                
+ 
+            </div>
+            <div class="small-graph">
+                <div class="graph-heading">Social Data</div>
+                <canvas id="graph1"></canvas>
+                <p class="result" id="graph1-result"></p>
+            </div>
+
+
+        </div>
+        <div class="dashboard-container">
+            <div  class="small-graph">
+                <div  class="graph-heading">PsychePulse Gauge Score</div>
+                <canvas id="graph3"></canvas>
+                <p class="result" id="graph3-result"></p>
+            </div>
+            <div class="small-graph">
+                <div class="graph-heading">Current Mental Health Score</div>
+                <canvas id="graph2"></canvas>
+                <p class="result" id="graph2-result"></p>
+            </div>
+
+        </div>
+        <div class="suggestion-container">
+            <div class="small-box">
+                <img src="{{ static_url }}/images/sugg.jpeg" alt=" Image">
+                <button onclick="window.location.href='/suggestions'">Suggestions</button>
+                
+            </div>
+            <div class="small-box">
+                <img src="{{ static_url }}/images/rem.jpeg" alt=" Image">
+                <button onclick="window.location.href='/remedies'">Remedies</button>
+            </div>
+            <div class="small-box">
+                <img src="{{ static_url }}/images/pro.jpeg" alt=" Image">
+                <button onclick="window.location.href='/prohelp'">Professional Help</button>
+            </div>
+            <div class="small-box">
+                <img src="{{ static_url }}/images/logout.jpeg" alt="Image">
+                <button onclick="window.location.href='/logout'">Logout</button>
+            </div>
+            
+        </div>
+
+    
+
+    </main>
+    <script>
+
+        const originalArray = {{ random_values }};
+
+        // Create a new array containing elements from 1 to the length of the original array
+        const newArray = {{ dateofT|safe }};
+
+        var chartData = {
+            labels: newArray,
+            datasets: [{
+                label: "Mental Health",
+                borderColor: 'rgba(255, 99, 132, 1)', // Light red color
+                backgroundColor: 'rgba(255, 99, 132, 0.2)', // Light red fill color
+                borderCapStyle: 'round', // Rounded line ends
+                fill: true,
+                data: originalArray,
+                lineTension: 0.3, // Adjust the line tension to create a wavy effect
+            }]
+        };
+
+        // Get the context of the canvas element
+        var ctx = document.getElementById('myLineChart').getContext('2d');
+
+        // Create the line chart
+        var myLineChart = new Chart(ctx, {
+            type: 'line',
+            data: chartData,
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Dates'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Tweets Score'
+                        }
+                    }
+                },
+                responsive:true
+            }
+        });
+
+        var data1 = {
+            labels: ['Social Data Score'],
+            datasets: [{
+                data: [{{avg_pie}}, 100-{{avg_pie}}], // Example percentages
+                backgroundColor: ['#36A2EB', '#ddd'],
+            }]
+        };
+
+        var data2 = {
+            labels: ['Current Mental Health Score',],
+            datasets: [{
+                data: [{{fc_pie}},{{100 - fc_pie}}], // Example percentages
+                backgroundColor: ['#FF6384', '#ddd'],
+            }]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            cutout: '70%', 
+            legend: {
+        labels: {
+            fontColor: 'white' // Set legend text color to white
+        }
+    }
+        };
+
+        var ctx1 = document.getElementById('graph1').getContext('2d');
+        var ctx2 = document.getElementById('graph2').getContext('2d');
+
+        new Chart(ctx1, {
+            type: 'doughnut',
+            data: data1,
+            options: options,
+        });
+
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: data2,
+            options: options,
+        });
+
+        // Update the result for graph1
+        var resultElement1 = document.getElementById('graph1-result');
+        resultElement1.textContent = 'Score: ' + data1.datasets[0].data[0] + '%';
+
+        // Update the result for graph2
+        var resultElement2 = document.getElementById('graph2-result');
+        resultElement2.textContent = 'Score: ' + data2.datasets[0].data[0] + '%';
+
+        var data3 = {
+    labels: ['PsychePulse Gauge Score'],
+    datasets: [{
+        data: [{{phq_pie}},{{100 - phq_pie}}], // Example percentages
+        backgroundColor: ['#FFCE56', '#ddd'],
+    }]
+};
+
+var ctx3 = document.getElementById('graph3').getContext('2d');
+
+new Chart(ctx3, {
+    type: 'doughnut',
+    data: data3,
+    options: options,
+});
+
+// Update the result for graph3
+var resultElement3 = document.getElementById('graph3-result');
+resultElement3.textContent = 'Score: ' + data3.datasets[0].data[0] + '%';
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- this is done to set the url of static folder for images  -->
+{% set static_url = url_for('static', filename='') %}
+{% include 'headersidebar.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ static_url }}stylemain.css">
+    <link rel="stylesheet" href="{{ static_url }}stylesugg.css">
+    <title>PsycheScan</title>
+    
+</head>
+<body>
+    <div class="suggestion-box1">
+        <div class="suggestions-container1">
+            <h1 style="text-align: center;">Suggestions</h1>
+            <div class="flex-container">
+                <div class="suggestion-box-item">
+                    <img src="{{ static_url }}images/sugg1.jpeg" alt="Image 1">
+                    <p>Prioritizing mental health is an essential aspect of overall well-being. 
+                    It involves acknowledging and addressing emotional challenges with empathy and understanding. 
+                    Open conversations and reducing stigma create a supportive environment for mental health.
+                    Seeking help when needed and fostering resilience contribute to a healthier, 
+                    more balanced life.</p>
+                </div>
+                <div class="suggestion-box-item">
+                    <img src="{{ static_url }}images/suggexercise.jpeg" alt="Image 2">
+                    <p>Regular Exercise: Physical activity has a profound impact on mental health.
+                    Engage in activities you enjoy, whether it's walking, jogging, yoga, or 
+                    other forms of exercise.</p>
+                </div>
+                <div class="suggestion-box-item">
+                    <img src="{{ static_url }}images/sugg2.jpeg" alt="Image 3">
+                    <p>Balanced Nutrition: A well-balanced diet plays a crucial role in mental well-being. 
+                      Include a variety of fruits, vegetables, lean proteins, and whole grains in your diet.</p>
+                </div>
+                <div class="suggestion-box-item">
+                    <img src="{{ static_url }}images/sugghobies.jpeg" alt="Image 4">
+                    <p>Time for Hobbies: Engage in activities you love. Hobbies provide 
+                        a sense of purpose, relaxation, and joy, contributing positively to mental health.</li>
+                   </p>
+                </div>
+                <div class="suggestion-box-item">
+                    <img src="{{ static_url }}images/suggsleep.jpeg" alt="Image 5">
+                    <p>Adequate Sleep: Prioritize quality sleep. Establish a consistent sleep routine and 
+                    create a comfortable sleep environment to support mental and emotional resilience.</p>
+                </div>
+                <div class="suggestion-box-item">
+                    <img src="{{ static_url }}images/suggconnection.jpeg" alt="Image 5">
+                    <p>Social Connections: Maintain meaningful connections with friends, family, and community.
+                        Social support is a powerful buffer against stress and promotes emotional well-being.</li>
+                        </p>
+   
+                </div>
+                                    
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>

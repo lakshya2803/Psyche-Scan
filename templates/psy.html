@@ -1,0 +1,66 @@
+<!-- this is done to set the url of static folder  -->
+{% set static_url = url_for('static', filename='') %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psyche Scan - Psychiatrists in Delhi</title>
+    <link rel="stylesheet" href="{{ static_url }}stylepsy.css">
+    
+</head>
+<body>
+
+    <header>
+        <div class="psylogo">
+            <button onclick="window.location.href='/'">PsycheScan</button>  
+        </div>
+        <h1>Psyche Scan - Psychiatrists in Delhi</h1>
+    </header>
+
+    <div class="psychiatrists-container">
+        <div class="psychiatrist">
+            <img src="{{static_url}}\images\pro.jpeg"  alt="image">
+            
+            <h2>Dr. A. Sharma</h2>
+            <p>Address: 123 ABC Street, Delhi</p>
+        </div>
+
+        <div class="psychiatrist">
+                <img src="{{static_url}}\images\pro.jpeg"  alt="image">
+                <h2>Dr. B. Verma</h2>
+                <p>Address: 456 XYZ Street, Delhi</p>
+
+        </div>
+
+        <div class="psychiatrist">
+            <img src="{{static_url}}\images\pro.jpeg"  alt="image">
+            <h2>Dr. C. Singh</h2>
+            <p>Address: 789 PQR Street, Delhi</p>
+        </div>
+
+        <div class="psychiatrist">
+            <img src="{{static_url}}\images\pro.jpeg"  alt="image">
+            <h2>Dr. D. Kapoor</h2>
+            <p>Address: 101 LMN Street, Delhi</p>
+        </div>
+
+        <div class="psychiatrist">
+            <img src="{{static_url}}\images\pro.jpeg"  alt="image">
+            <h2>Dr. E. Gupta</h2>
+            <p>Address: 202 UVW Street, Delhi</p>
+        </div>
+
+        <div class="psychiatrist">
+            <img src="{{static_url}}\images\pro.jpeg"  alt="image">
+            <h2>Dr. F. Malhotra</h2>
+            <p>Address: 303 GHI Street, Delhi</p>
+        </div>
+
+        
+
+    </div>
+
+</body>
+</html>

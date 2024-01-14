@@ -1,0 +1,95 @@
+<!-- this is done to set the url of static folder  -->
+{% set static_url = url_for('static', filename='') %}
+{% include 'headersidebar.html' %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ static_url }}remstyle.css">
+    <title>Yoga Postures</title>
+</head>
+<body>
+
+    <!-- <header>
+        <h1>Yoga Postures</h1>
+    </header> -->
+
+    <section class="yoga-container">
+        
+        <div class="row">
+            <div class="yoga-posture">
+                <img src="{{static_url }}image/mountain pose.png" alt="Yoga Pose 1">
+                <div>
+                    <h2>Mountain Pose</h2>
+                    <p>A standing pose that promotes strength and stability. It improves posture and increases awareness.</p>
+                    <p><strong>Benefits:</strong> Improves posture, strengthens thighs and ankles, reduces flat feet.</p>
+                </div>
+            </div>
+
+         
+            <div class="yoga-posture">
+                <img src="{{ static_url }}image/chidls pose.png" alt="Yoga Pose 2" >
+                <div>
+                    <h2>Child's Pose</h2>
+                    <p>Kneel on the mat, sit back on your heels, and extend your arms forward with your forehead resting on the floor.</p>
+                    <p><strong>Benefits:</strong> Relieves back and neck pain, reduces stress and fatigue.</p>
+                </div>
+            </div>
+        </div>
+
+<!-- 2nd Row begins -->
+        <div class="row">
+
+            <div class="yoga-posture">
+                <img src="{{static_url }}image/warrior pose.png" alt="Yoga Pose 3">
+                <div>
+                    <h2>Warrior Pose</h2>
+                    <p>Stand with one foot forward, knee bent, arms extended overhead (Warrior I) 
+                        or to the sides (Warrior II), promoting strength and balance.</p>
+                    <p><strong>Benefits:</strong> Builds strength and stamina, improves balance.</p>
+                </div>
+            </div>
+
+        
+            <div class="yoga-posture">
+                <img src="{{ static_url }}image/downward-dog.png" alt="Yoga Pose 4">
+                <div>
+                    <h2>Downward Dog</h2>
+                    <p>An inversion that stretches the whole body and builds strength.</p>
+                    <p><strong>Benefits:</strong> Strengthens arms and legs, improves digestion.</p>
+                </div>
+            </div>
+        </div>
+
+      
+        <div class="row">
+            <div class="yoga-posture">
+                <img src="{{ static_url }}image/corpse pose.png" alt="Yoga Pose 5">
+                <div>
+                    <h2>Corpse Pose</h2>
+                    <p>Lie on your back, arms by your sides, and close your eyes. Focus on deep, rhythmic breathing.</p>
+                    <p><strong>Benefits:</strong> Promotes relaxation, reduces anxiety, and improves overall well-being.</p>
+                </div>
+            </div>
+
+  
+            <div class="yoga-posture">
+                <img src="{{ static_url }}image/bridge pose.png"  alt="Yoga Pose 6" >
+                <div>
+                    <h2>Bridge Pose</h2>
+                    <p>Lie on your back, bend your knees, and lift your hips toward the ceiling.</p>
+                    <p><strong>Benefits:</strong> Helps in reducing anxiety and stress.</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+
+
+</body>
+</html>

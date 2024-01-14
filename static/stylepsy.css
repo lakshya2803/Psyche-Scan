@@ -1,0 +1,94 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background-image: linear-gradient(
+        25deg,
+        hsl(149deg 100% 82%) 0%,
+        hsl(148deg 99% 83%) 4%,
+        hsl(148deg 98% 84%) 8%,
+        hsl(148deg 97% 85%) 13%,
+        hsl(147deg 96% 87%) 17%,
+        hsl(147deg 94% 88%) 22%,
+        hsl(147deg 92% 89%) 27%,
+        hsl(146deg 89% 90%) 32%,
+        hsl(146deg 85% 91%) 37%,
+        hsl(146deg 81% 92%) 43%,
+        hsl(145deg 74% 93%) 49%,
+        hsl(145deg 65% 94%) 57%,
+        hsl(145deg 53% 95%) 69%,
+        hsl(145deg 33% 96%) 87%,
+        hsl(0deg 0% 97%) 100%
+      );
+      background-repeat: repeat;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+}
+button{
+    margin-left: 20px;
+    font-size: 20px;
+    padding: 10px;
+}
+header {
+    display: flex;
+    background:teal;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.psylogo{
+    margin-left: 2vw;
+    display: flex;
+    margin-top: 2vh;
+    margin-right: 22vw;
+}
+.psylogo button{
+    border-radius: 30px;
+    border: solid 1px white;
+    background-color: inherit;
+    color: white;
+    text-decoration: none;
+}
+
+.psychiatrists-container {
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 80vh;
+}
+
+.psychiatrist {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    border-radius: 30px;
+}
+.psychiatrist img{
+    width: 50%;
+    height: 50%;
+    border-radius: 30px;
+
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: #777;
+}
+
+.psylogo button{
+    border-radius: 30px;
+    border: solid 1px white;
+    background-color: inherit;
+    color: white;
+    text-decoration: none;
+}

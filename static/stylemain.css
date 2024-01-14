@@ -1,0 +1,226 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;  
+    
+}
+
+
+header {
+    
+    display: flex;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    max-height: 10vh;
+    
+    
+    margin-bottom: 1px;
+
+}
+button{
+    padding: 15px;
+    border: 1px solid;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 8px;
+    width: 150px;
+    font-size: 20px;
+    background-color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+    color: #008080;  
+    
+}
+.right{
+    width: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+   
+}
+.right a{
+    width: 100px;
+}
+header .right a img{
+    margin-top: 13px;
+    margin-right: 20px;
+}
+
+.dashboard-container {
+    display: flex;
+    width: 60vw;
+    margin: 20px;
+    margin-left:28vw;
+    gap: 10vw;
+    
+}
+.suggestion-container{
+    display: flex;
+    width: 60vw;
+    margin: 20px;
+    margin-left:28vw;
+    gap: 4vw;
+    
+    
+
+}
+
+.graph-container {
+    width: 68vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(52, 215, 43, 0.1);
+    width: 900px;
+    height: 450px;
+}
+
+.small-graph{
+    position:relative;
+    margin-top: 4vh;
+    width: 25vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(52, 215, 43, 0.1);
+    height: 53vh;
+    font-size: 22px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+
+}
+.small-box{
+    margin-top: 7vh;
+    width: 20vw;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(52, 215, 43, 0.1);
+    height: 35vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(3px) ;
+
+}
+.small-box img {
+    max-width: 100%;
+    max-height: 80%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 30px;
+   
+}
+
+.small-box button {
+    
+    display: block;
+    margin: 10px auto;
+    margin-top: 17px;
+
+}
+.small-box button:hover{
+    background-color:#de1738;
+    color: white;
+}
+
+h5{
+    position: absolute;
+    transform: translateY(-50%);
+}
+.graph-heading {
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    top: -10%;
+}
+#current{
+    margin-left: 17vw;
+}
+
+
+.sidebar {
+    height: 80vh;
+    width: 250px;
+    position: fixed;
+    margin: 10px;
+    border-radius: 20px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+    /* backdrop-filter: blur(3px); */
+    display: flex;
+    flex-direction: column;
+    font-size: 19px;
+}
+
+.sidebar a {
+    padding: 17px;
+    text-decoration: none;
+    color:black;
+    display: block;
+    
+}
+.sidebar a:hover{
+    background-color: aliceblue;
+
+}
+
+.suggestion-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+li {
+    line-height: 1.5; /* Adjust the value to control the line spacing */
+    margin-bottom: 10px; /* Optional: Add additional margin between list items */
+}
+main{
+    margin-top: 15vh;
+
+}
+.heading{
+    margin-top: 25px;
+    text-align: center;
+    
+}
+.profile{
+    margin-left: 300px;
+}
+header .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .right a {
+    width: 100px;
+}
+
+header .heading {
+    margin-top: 25px;
+    text-align: center;
+    margin-left: 370px;
+    margin-right: 200px;
+    flex: 1;
+}
+.result{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+.dashboard-container>graph-container>small-graph>graph-heading p{
+    font-size: 300px;
+}

@@ -1,0 +1,214 @@
+html,body{
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 0%;
+    max-width: 1450px;
+    background-image: linear-gradient(
+        25deg,
+        hsl(149deg 100% 82%) 0%,
+        hsl(148deg 99% 83%) 4%,
+        hsl(148deg 98% 84%) 8%,
+        hsl(148deg 97% 85%) 13%,
+        hsl(147deg 96% 87%) 17%,
+        hsl(147deg 94% 88%) 22%,
+        hsl(147deg 92% 89%) 27%,
+        hsl(146deg 89% 90%) 32%,
+        hsl(146deg 85% 91%) 37%,
+        hsl(146deg 81% 92%) 43%,
+        hsl(145deg 74% 93%) 49%,
+        hsl(145deg 65% 94%) 57%,
+        hsl(145deg 53% 95%) 69%,
+        hsl(145deg 33% 96%) 87%,
+        hsl(0deg 0% 97%) 100%
+      );
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+      
+}
+
+.name{
+    margin-left: 60px;
+}
+a{
+    text-decoration: none;
+}
+.flex-row{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.nav{
+    padding:0 2rem;
+    padding-right: 0rem;
+    height: 12.5vh;
+    width: 90vw;
+    overflow:hidden;
+    
+    justify-content: center;
+    margin-left: 2.5vw;
+    margin-top: 10px;
+    border-radius: 40px;
+}
+.nav .nav-items{
+    list-style-type:none;
+    display:flex;
+    margin: 0;
+    margin-left: 350px;
+}
+.nav .nav-items .nav-link{
+    padding: 1.6rem 1rem;
+    font-size: 1.1rem;
+}
+.nav .nav-menu{    
+    justify-content: flex-start;
+}
+.nav .nav-brand a{
+    /* src: "image/logo.png"; */
+    font-size: 2rem;
+    padding: 1rem 0;
+    display: block  ;
+    color: #076585;
+}
+
+.navbar-link:link,
+.navbar-link:visited{              /*This is done to give style to navlinks*/
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: rgb(15, 15, 15);
+    transition: color 0.3s linear;     
+}
+
+.navbar-link:hover,
+.navbar-link:active{                /*This is used to change the color of link when*/
+    color: #9292c7; 
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 10px;
+    
+}
+
+
+main .site-title{     /*this is for get started button text to bring it over the image*/
+    background: none;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    height: 50vh                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
+    justify-content:center;
+
+}
+
+h1{
+    font-size: 3.0rem;
+}
+main .site-title .site-background{
+    padding-top: 10rem;
+    color: black;
+    text-align: center;
+    
+}
+main .site-title h1,h2{
+    margin: 0rem;
+}
+main .site-title .btn{
+    margin: 2rem;
+    background: #008080;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    width: 300px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: azure;
+
+}
+main h1{
+    color: #076585;
+}
+.header .logo{
+    height: 3rem;
+    size: 0rem;
+}
+.mainbox{
+    margin-top: 55px;
+    display: flex;
+    margin-left: 3px;
+    justify-content: space-around;
+}
+.box{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    border-radius: 30px;
+    margin-right: -50px; 
+    transition: margin-right 0.3s ease, transform 0.3s ease;
+}
+
+.box:hover {
+    margin-right: 0; 
+    transform: rotate(20deg); 
+}
+.box1{
+    background: #BE93C5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.box2{
+    background: #C9FFBF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+.box3{
+    background: #ddd6f3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+.box4{
+    background: #DE6262;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #FFB88C, #DE6262);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #FFB88C, #DE6262); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.box5{
+    background: #076585;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #fff, #076585);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #fff, #076585); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.box img{
+    max-width: 220px;
+    max-height: 320px;
+    
+    margin:20px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+    border-radius: 50px;
+}
+.square-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    
+    height: 30%; /* Adjusted height to leave space for content */
+}
+button{
+    padding: 15px;
+    border: 1px solid;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 14px;
+ 
+    width: 150px;
+    font-size: 20px;
+    background: initial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
+    color: #008080;  
+    
+}

@@ -1,0 +1,92 @@
+<!-- this is done to set the url of static folder for images  -->
+{% set static_url = url_for('static', filename='') %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psyche Scan</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ static_url }}style2.css">
+  </head>
+  
+<body>
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <button>PsycheScan</button>  
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a class="navbar-link" href="/howitworks" onclick="changeLocation('/howitworks'); return false;">How It Works</a>
+                    </li>
+         
+                    <li class="nav-link">
+                        <a class="navbar-link" href="/psy" onclick="changeLocation('/psy')">Professional's Help</a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a class="navbar-link" href="https://www.facebook.com/">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="site-title">
+            <div class="site-background">
+                <h1>Your Mental Health</h1>
+                <h1>Is Important!</h1>
+                <button class="btn" onclick="window.location.href='/signup'">Get Started</button>
+            </div>
+        </section>
+    </main>
+    <div class="mainbox">
+    <div class="box box1">
+        <img src="{{ static_url }}/image/img1box1.png" alt="img1">
+        <div class="square-content">
+            <p>Mood Tracker</p>
+            <p>Helps to analyse your mental helath</p>
+        </div>
+    </div>
+    <div class="box box2">
+        <img src="{{ static_url }}/image/imgbox2.png" alt="img1">
+        <div class="square-content">
+            <p>Meditation Catalog</p>
+            <p>We provide you list of remedies to enhance   mental wellbeing.
+            </p>
+        </div>
+    </div>
+    <div class="box box3">
+        <img src="{{ static_url }}/image/imgbox3.png" alt="img1">
+        <div class="square-content">
+            <p>Brain exercises</p>
+            <p>There are brain exercises to available to enhance wellbeing</p>
+        </div>
+    </div>
+    <div class="box box4">
+        <img src="{{ static_url }}/image/imgbox4.png" alt="img1">
+        <div class="square-content">
+            <p>Practice Gratitude</p>
+            <p>One must practice Gratitude to enhance wellbeing </p>
+        </div>
+    </div>
+    <div class="box box5">
+        <img src="{{ static_url }}/image/imgbox5.png" alt="img1">
+        <div class="square-content">
+            <p>Goal List</p>
+            <p>One should make a list of goals to improve wellbeing</p>
+        </div>
+    </div>
+</div>
+
+
+    
+    
+</body>
+</html>

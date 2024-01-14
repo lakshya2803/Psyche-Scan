@@ -1,0 +1,91 @@
+
+
+body {
+    background-image: linear-gradient(
+        25deg,
+        hsl(149deg 100% 82%) 0%,
+        hsl(148deg 99% 83%) 4%,
+        hsl(148deg 98% 84%) 8%,
+        hsl(148deg 97% 85%) 13%,
+        hsl(147deg 96% 87%) 17%,
+        hsl(147deg 94% 88%) 22%,
+        hsl(147deg 92% 89%) 27%,
+        hsl(146deg 89% 90%) 32%,
+        hsl(146deg 85% 91%) 37%,
+        hsl(146deg 81% 92%) 43%,
+        hsl(145deg 74% 93%) 49%,
+        hsl(145deg 65% 94%) 57%,
+        hsl(145deg 53% 95%) 69%,
+        hsl(145deg 33% 96%) 87%,
+        hsl(0deg 0% 97%) 100%
+      );
+
+    
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #008080;
+    padding: 10px;
+    top: 0;
+}
+header h1{
+    background-color: #008080;
+    color: white;
+    text-align: center;
+}
+
+
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-top: 110px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.options{
+    display: flex;
+    flex-direction:column;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+.submit-button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+input[type="submit"] {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
