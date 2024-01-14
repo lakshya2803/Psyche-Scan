@@ -9,7 +9,15 @@ In this competative world it is necessary to look upon your mental health.
 
 - User friendly interface
 - Data Manupilation using CSV and Python
+- **Algorithmic Processing:** An in-house algorithm processes sentiment scores and PPG form responses to generate individual and overall mental health scores.
+- **Visualization:** Results are presented through a user-friendly interface, including pie charts for tweets, PPG responses, and overall mental health.
+- **Resource Provision:** Additional resources, such as general suggestions, remedies (primarily yoga), and contact details of mental health professionals, are provided.
 
+## Technologies Used
+
+- Frontend: HTML, CSS, JavaScript
+- Backend: Flask (Python)
+- Database: MongoDB
 
 ## Installation
 
@@ -49,6 +57,7 @@ and run the file then your vader_lexicon will be downloaded and you can delete t
 - Install MongoDB:
     - Run the downloaded installer (.msi file).
 - You can also download Compass for GUI version
+
 ## Running
 
 Now after cloning the repository go to your text editor and run app.py file then go to 
